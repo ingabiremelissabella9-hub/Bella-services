@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bella Services — professional housekeeping, nanny care, deep cleaning and French teaching services in the United Arab Emirates.">
+  <meta name="theme-color" content="#e94f86">
+  <title>Bella Services | Care. Clean. Trust.</title>
+  <style>
+    :root{
+      --pink:#e94f86;--pink2:#ff7aa8;--ink:#17151a;--muted:#6f6971;
+      --cream:#fff8fb;--white:#fff;--line:#f1dce5;--shadow:0 18px 50px rgba(32,15,25,.10);
+      --radius:24px;--max:1160px;
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .wrap{width:min(92%,var(--max));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #eee}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-family:Georgia,serif;font-size:28px;font-style:italic;color:var(--pink);line-height:1}
+    .brand small{display:block;font-family:Arial,sans-serif;font-size:9px;letter-spacing:3px;font-style:normal;color:#222;text-align:center;margin-top:4px}
+    .links{display:flex;gap:25px;align-items:center;font-size:14px;font-weight:700}
+    .links a:hover{color:var(--pink)}
+    .actions{display:flex;gap:10px;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:800;font-size:14px;transition:.2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.pink{background:var(--pink);border-color:var(--pink);color:white}
+    .lang{border:1px solid #ddd;background:white;border-radius:999px;padding:10px 12px;font-weight:700}
+    .hero{background:linear-gradient(135deg,#fff7fa,#fff);padding:70px 0 55px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px}
+    .eyebrow{color:var(--pink);font-weight:900;letter-spacing:2px;font-size:13px;text-transform:uppercase}
+    h1{font-family:Georgia,serif;font-size:clamp(52px,7vw,88px);line-height:.98;margin:12px 0 18px}
+    h1 span{color:var(--pink)}
+    .tag{font-family:Georgia,serif;font-size:27px;font-style:italic;margin-bottom:18px}
+    .lead{font-size:18px;color:var(--muted);max-width:600px}
+    .hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+    .contact-strip{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+    .contact-pill{background:white;border:1px solid var(--line);box-shadow:0 8px 25px rgba(0,0,0,.05);padding:12px 16px;border-radius:16px;font-weight:700}
+    .hero-card{border-radius:34px;overflow:hidden;box-shadow:var(--shadow);border:7px solid white;transform:rotate(1deg)}
+    .hero-card img{width:100%;height:500px;object-fit:cover;object-position:center}
+    section{padding:85px 0}
+    .soft{background:var(--cream)}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 45px}
+    .section-head h2{font-family:Georgia,serif;font-size:46px;line-height:1.1;margin:10px 0}
+    .section-head p{color:var(--muted)}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-photo{border-radius:30px;overflow:hidden;box-shadow:var(--shadow);background:#f8e9ef}
+    .about-photo img{width:100%;height:440px;object-fit:cover}
+    .about h2{font-family:Georgia,serif;font-size:48px;line-height:1.1;margin:10px 0 20px}
+    .features{display:grid;gap:16px;margin-top:28px}
+    .feature{display:flex;gap:15px;align-items:flex-start}
+    .icon{width:44px;height:44px;flex:none;border-radius:14px;background:#ffe0eb;color:var(--pink);display:grid;place-items:center;font-size:21px;font-weight:900}
+    .feature strong{display:block;margin-bottom:2px}
+    .feature span{color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+    .service{padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 8px 25px rgba(40,15,30,.04);transition:.2s}
+    .service:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .service .emoji{font-size:30px}
+    .service h3{margin:14px 0 8px;font-size:18px}
+    .service p{margin:0;color:var(--muted);font-size:14px}
+    .why{background:#201a1e;color:white;position:relative;overflow:hidden}
+    .why:after{content:"♥";position:absolute;right:5%;top:-50px;font-size:260px;color:rgba(255,255,255,.03)}
+    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .why h2{font-family:Georgia,serif;font-size:52px;line-height:1.05;margin:10px 0 20px}
+    .why p{color:#ddd}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .stat{padding:25px;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:rgba(255,255,255,.04)}
+    .stat b{display:block;color:#ff7aa8;font-size:34px;font-family:Georgia,serif}
+    .stat span{color:#ddd}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+    .contact-card{padding:34px;border-radius:28px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+    .contact-card h2{font-family:Georgia,serif;font-size:46px;line-height:1.05;margin:8px 0 16px}
+    .contact-item{display:flex;gap:14px;margin:20px 0}
+    .contact-item .icon{width:42px;height:42px}
+    .contact-item b{display:block}
+    .contact-item span{color:var(--muted)}
+    .big-whatsapp{display:flex;align-items:center;justify-content:space-between;gap:20px;background:linear-gradient(135deg,#f04e87,#d93b73);color:white;border-radius:28px;padding:30px;margin-top:25px}
+    .big-whatsapp h3{margin:0 0 5px;font-family:Georgia,serif;font-size:28px}
+    .big-whatsapp p{margin:0;color:#ffeaf2}
+    footer{background:#121013;color:#ddd;padding:30px 0}
+    .footer{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .footer .brand small{color:#aaa}
+    .float{position:fixed;right:18px;bottom:18px;z-index:30}
+    .float a{display:flex;align-items:center;gap:9px;background:var(--pink);color:#fff;padding:14px 18px;border-radius:999px;box-shadow:0 12px 30px rgba(233,79,134,.35);font-weight:900}
+    .menu{display:none}
+    @media(max-width:1000px){.links{display:none}.menu{display:block;border:0;background:transparent;font-size:26px}.services{grid-template-columns:repeat(2,1fr)}.hero-grid,.about,.why-grid,.contact{grid-template-columns:1fr}.hero-card{max-width:620px;margin:auto}.hero-card img{height:420px}.about-photo{max-width:620px;margin:auto}}
+    @media(max-width:560px){.nav{height:68px}.actions .btn{display:none}.hero{padding-top:45px}.tag{font-size:22px}section{padding:65px 0}.section-head h2,.about h2,.why h2,.contact-card h2{font-size:38px}.services{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.hero-card img{height:310px}.footer{flex-direction:column;text-align:center}.float{right:12px;bottom:12px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">Bella<small>SERVICES</small></a>
+    <nav class="links">
+      <a href="#home" data-i18n="navHome">Home</a>
+      <a href="#about" data-i18n="navAbout">About Me</a>
+      <a href="#services" data-i18n="navServices">Services</a>
+      <a href="#why" data-i18n="navWhy">Why Choose Me</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </nav>
+    <div class="actions">
+      <select class="lang" id="lang" aria-label="Language">
+        <option value="en">EN</option><option value="fr">FR</option><option value="ar">AR</option>
+      </select>
+      <a class="btn pink" href="https://wa.me/971528724669?text=Hello%20Bella%20Services%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener">WhatsApp</a>
+      <button class="menu" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow" data-i18n="welcome">Welcome to</div>
+      <h1>Bella <span>Services</span></h1>
+      <div class="tag" data-i18n="tag">Care. Clean. Trust. ♥</div>
+      <p class="lead" data-i18n="lead">Professional housekeeping, nanny care, cleaning and French teaching services — with care, honesty and attention to detail.</p>
+      <div class="hero-buttons">
+        <a class="btn pink" href="https://wa.me/971528724669?text=Hello%20Bella%20Services%2C%20I%20would%20like%20to%20book%20a%20service." target="_blank" rel="noopener" data-i18n="chat">Chat on WhatsApp</a>
+        <a class="btn" href="#services" data-i18n="learn">View Services ↓</a>
+      </div>
+      <div class="contact-strip">
+        <a class="contact-pill" href="tel:+971528724669">☎ +971 52 872 4669</a>
+        <span class="contact-pill">⌖ United Arab Emirates</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="assets/bella-hero.png" alt="Bella Services website visual">
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="about">
+  <div class="wrap about">
+    <div class="about-photo"><img src="assets/bella-hero.png" alt="Bella Services"></div>
+    <div>
+      <div class="eyebrow" data-i18n="aboutEyebrow">About Me</div>
+      <h2 data-i18n="aboutTitle">A service you can trust.</h2>
+      <p data-i18n="aboutText">Bella Services is a personal service brand focused on making homes cleaner, more organized and comfortable. Services are offered in the United Arab Emirates with a caring and professional approach.</p>
+      <div class="features">
+        <div class="feature"><div class="icon">✓</div><div><strong data-i18n="f1t">Trust & Respect</strong><span data-i18n="f1d">Careful, respectful service in your home.</span></div></div>
+        <div class="feature"><div class="icon">★</div><div><strong data-i18n="f2t">Attention to Detail</strong><span data-i18n="f2d">Clean, organized and detail-focused work.</span></div></div>
+        <div class="feature"><div class="icon">♥</div><div><strong data-i18n="f3t">Flexible Services</strong><span data-i18n="f3d">Choose the service that fits your needs.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="servicesEyebrow">My Services</div>
+      <h2 data-i18n="servicesTitle">What I can do for you</h2>
+      <p data-i18n="servicesIntro">Professional help for homes, families and individuals.</p>
+    </div>
+    <div class="services">
+      <article class="service"><div class="emoji">🧹</div><h3 data-i18n="s1t">Housekeeping</h3><p data-i18n="s1d">Cleaning, organizing, mopping, ironing and keeping your home fresh.</p></article>
+      <article class="service"><div class="emoji">👶🏽</div><h3 data-i18n="s2t">Nanny Care</h3><p data-i18n="s2d">Caring for children with patience, attention and respect.</p></article>
+      <article class="service"><div class="emoji">✨</div><h3 data-i18n="s3t">Deep Cleaning</h3><p data-i18n="s3d">Detailed cleaning for kitchens, bathrooms, rooms and other areas.</p></article>
+      <article class="service"><div class="emoji">📚</div><h3 data-i18n="s4t">French Teaching</h3><p data-i18n="s4d">French support for children and adults, from beginner level and beyond.</p></article>
+      <article class="service"><div class="emoji">🧺</div><h3 data-i18n="s5t">Other Services</h3><p data-i18n="s5d">Washing, ironing and other agreed household support.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap why-grid">
+    <div>
+      <div class="eyebrow" style="color:#ff7aa8" data-i18n="whyEyebrow">Why Choose Me</div>
+      <h2 data-i18n="whyTitle">I do my best for you.</h2>
+      <p data-i18n="whyText">The goal is simple: reliable service, a clean result and a comfortable experience from the first message to the finished job.</p>
+      <a class="btn pink" href="#contact" data-i18n="contactBtn">Contact Me</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>100%</b><span data-i18n="stat1">Care & commitment</span></div>
+      <div class="stat"><b>5</b><span data-i18n="stat2">Service categories</span></div>
+      <div class="stat"><b>3</b><span data-i18n="stat3">Languages for the website</span></div>
+      <div class="stat"><b>UAE</b><span data-i18n="stat4">Service location</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="contact">
+  <div class="wrap contact">
+    <div>
+      <div class="eyebrow" data-i18n="contactEyebrow">Contact Me</div>
+      <div class="contact-card">
+        <h2 data-i18n="contactTitle">Let's work together.</h2>
+        <p data-i18n="contactIntro">For bookings, questions or service requests, contact Bella Services directly.</p>
+        <div class="contact-item"><div class="icon">☎</div><div><b data-i18n="phoneLabel">Call</b><span>+971 52 872 4669</span></div></div>
+        <div class="contact-item"><div class="icon">◉</div><div><b>WhatsApp</b><span>+971 52 872 4669</span></div></div>
+        <div class="contact-item"><div class="icon">⌖</div><div><b data-i18n="locationLabel">Location</b><span>United Arab Emirates</span></div></div>
+      </div>
+    </div>
+    <div class="contact-card" style="display:flex;flex-direction:column;justify-content:center">
+      <div class="eyebrow">WhatsApp</div>
+      <h2 data-i18n="waTitle">Ready to talk?</h2>
+      <p data-i18n="waText">Send a message and tell me what service you need, your preferred date and your location.</p>
+      <a class="btn pink" style="width:max-content" href="https://wa.me/971528724669?text=Hello%20Bella%20Services%2C%20I%20would%20like%20to%20ask%20about%20your%20services." target="_blank" rel="noopener" data-i18n="waButton">Message me on WhatsApp</a>
+      <div class="big-whatsapp"><div><h3>Bella Services</h3><p>Care. Clean. Trust. ♥</p></div><div style="font-size:42px">☏</div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer">
+    <div class="brand">Bella<small>SERVICES</small></div>
+    <div>© <span id="year"></span> Bella Services. <span data-i18n="rights">All rights reserved.</span></div>
+    <div>United Arab Emirates</div>
+  </div>
+</footer>
+
+<div class="float">
+  <a href="https://wa.me/971528724669?text=Hello%20Bella%20Services%2C%20I%20need%20your%20help." target="_blank" rel="noopener">☏ WhatsApp</a>
+</div>
+
+<script>
+const translations = {
+  en:{
+    navHome:"Home",navAbout:"About Me",navServices:"Services",navWhy:"Why Choose Me",navContact:"Contact",
+    welcome:"Welcome to",tag:"Care. Clean. Trust. ♥",lead:"Professional housekeeping, nanny care, cleaning and French teaching services — with care, honesty and attention to detail.",chat:"Chat on WhatsApp",learn:"View Services ↓",
+    aboutEyebrow:"About Me",aboutTitle:"A service you can trust.",aboutText:"Bella Services is a personal service brand focused on making homes cleaner, more organized and comfortable. Services are offered in the United Arab Emirates with a caring and professional approach.",
+    f1t:"Trust & Respect",f1d:"Careful, respectful service in your home.",f2t:"Attention to Detail",f2d:"Clean, organized and detail-focused work.",f3t:"Flexible Services",f3d:"Choose the service that fits your needs.",
+    servicesEyebrow:"My Services",servicesTitle:"What I can do for you",servicesIntro:"Professional help for homes, families and individuals.",
+    s1t:"Housekeeping",s1d:"Cleaning, organizing, mopping, ironing and keeping your home fresh.",s2t:"Nanny Care",s2d:"Caring for children with patience, attention and respect.",s3t:"Deep Cleaning",s3d:"Detailed cleaning for kitchens, bathrooms, rooms and other areas.",s4t:"French Teaching",s4d:"French support for children and adults, from beginner level and beyond.",s5t:"Other Services",s5d:"Washing, ironing and other agreed household support.",
+    whyEyebrow:"Why Choose Me",whyTitle:"I do my best for you.",whyText:"The goal is simple: reliable service, a clean result and a comfortable experience from the first message to the finished job.",contactBtn:"Contact Me",
+    stat1:"Care & commitment",stat2:"Service categories",stat3:"Languages for the website",stat4:"Service location",
+    contactEyebrow:"Contact Me",contactTitle:"Let's work together.",contactIntro:"For bookings, questions or service requests, contact Bella Services directly.",phoneLabel:"Call",locationLabel:"Location",waTitle:"Ready to talk?",waText:"Send a message and tell me what service you need, your preferred date and your location.",waButton:"Message me on WhatsApp",rights:"All rights reserved."
+  },
+  fr:{
+    navHome:"Accueil",navAbout:"À propos",navServices:"Services",navWhy:"Pourquoi moi",navContact:"Contact",
+    welcome:"Bienvenue chez",tag:"Soin. Propreté. Confiance. ♥",lead:"Services professionnels de ménage, garde d’enfants, nettoyage et enseignement du français — avec soin, honnêteté et attention aux détails.",chat:"WhatsApp",learn:"Voir les services ↓",
+    aboutEyebrow:"À propos",aboutTitle:"Un service digne de confiance.",aboutText:"Bella Services est une marque de services personnels dédiée à rendre les maisons plus propres, organisées et agréables. Services disponibles aux Émirats arabes unis avec une approche professionnelle et attentionnée.",
+    f1t:"Confiance & respect",f1d:"Un service soigneux et respectueux à votre domicile.",f2t:"Sens du détail",f2d:"Un travail propre, organisé et précis.",f3t:"Services flexibles",f3d:"Choisissez le service adapté à vos besoins.",
+    servicesEyebrow:"Mes services",servicesTitle:"Ce que je peux faire pour vous",servicesIntro:"Une aide professionnelle pour les maisons, familles et particuliers.",
+    s1t:"Ménage",s1d:"Nettoyage, rangement, lavage, repassage et entretien de la maison.",s2t:"Garde d’enfants",s2d:"Prise en charge des enfants avec patience, attention et respect.",s3t:"Grand nettoyage",s3d:"Nettoyage détaillé des cuisines, salles de bain, chambres et autres espaces.",s4t:"Cours de français",s4d:"Accompagnement en français pour enfants et adultes, débutants et plus.",s5t:"Autres services",s5d:"Lavage, repassage et autres aides ménagères convenues.",
+    whyEyebrow:"Pourquoi moi",whyTitle:"Je fais de mon mieux pour vous.",whyText:"L’objectif est simple : un service fiable, un résultat propre et une expérience agréable dès le premier message.",contactBtn:"Me contacter",
+    stat1:"Soin & engagement",stat2:"Catégories de services",stat3:"Langues du site",stat4:"Zone de service",
+    contactEyebrow:"Contact",contactTitle:"Travaillons ensemble.",contactIntro:"Pour une réservation ou une question, contactez directement Bella Services.",phoneLabel:"Téléphone",locationLabel:"Lieu",waTitle:"Prête à discuter ?",waText:"Envoyez un message avec le service souhaité, votre date préférée et votre localisation.",waButton:"Écrire sur WhatsApp",rights:"Tous droits réservés."
+  },
+  ar:{
+    navHome:"الرئيسية",navAbout:"من أنا",navServices:"الخدمات",navWhy:"لماذا أنا",navContact:"اتصل",
+    welcome:"مرحباً بكم في",tag:"عناية. نظافة. ثقة. ♥",lead:"خدمات احترافية للتنظيف، التدبير المنزلي، رعاية الأطفال وتعليم الفرنسية — بعناية وأمانة واهتمام بالتفاصيل.",chat:"واتساب",learn:"عرض الخدمات ↓",
+    aboutEyebrow:"من أنا",aboutTitle:"خدمة يمكنك الوثوق بها.",aboutText:"Bella Services علامة خدمات شخصية تهدف إلى جعل المنزل أكثر نظافة وتنظيماً وراحة. نقدم خدماتنا في دولة الإمارات العربية المتحدة بأسلوب مهني وودود.",
+    f1t:"الثقة والاحترام",f1d:"خدمة دقيقة ومحترمة في منزلك.",f2t:"الاهتمام بالتفاصيل",f2d:"عمل نظيف ومنظم ودقيق.",f3t:"خدمات مرنة",f3d:"اختر الخدمة التي تناسب احتياجاتك.",
+    servicesEyebrow:"خدماتي",servicesTitle:"ما يمكنني تقديمه لك",servicesIntro:"مساعدة احترافية للمنازل والعائلات والأفراد.",
+    s1t:"التدبير المنزلي",s1d:"تنظيف وترتيب ومسح وكي والحفاظ على نظافة المنزل.",s2t:"رعاية الأطفال",s2d:"رعاية الأطفال بصبر واهتمام واحترام.",s3t:"تنظيف عميق",s3d:"تنظيف مفصل للمطابخ والحمامات والغرف والمساحات الأخرى.",s4t:"تعليم الفرنسية",s4d:"دعم في اللغة الفرنسية للأطفال والكبار من المبتدئين وما فوق.",s5t:"خدمات أخرى",s5d:"الغسيل والكي وغيرها من المساعدة المنزلية المتفق عليها.",
+    whyEyebrow:"لماذا أنا",whyTitle:"أبذل قصارى جهدي من أجلك.",whyText:"الهدف بسيط: خدمة موثوقة ونتيجة نظيفة وتجربة مريحة منذ أول رسالة.",contactBtn:"اتصل بي",
+    stat1:"عناية والتزام",stat2:"فئات الخدمات",stat3:"لغات الموقع",stat4:"منطقة الخدمة",
+    contactEyebrow:"اتصل بي",contactTitle:"لنعمل معاً.",contactIntro:"للحجز أو الاستفسار، تواصل مباشرة مع Bella Services.",phoneLabel:"اتصال",locationLabel:"الموقع",waTitle:"هل أنت مستعد للتواصل؟",waText:"أرسل رسالة وأخبرني بالخدمة المطلوبة والتاريخ والموقع.",waButton:"راسلني عبر واتساب",rights:"جميع الحقوق محفوظة."
+  }
+};
+const lang = document.getElementById("lang");
+function applyLang(code){
+  const t=translations[code]||translations.en;
+  document.documentElement.lang=code;
+  document.documentElement.dir=code==="ar"?"rtl":"ltr";
+  document.querySelectorAll("[data-i18n]").forEach(el=>{ if(t[el.dataset.i18n]) el.textContent=t[el.dataset.i18n]; });
+}
+lang.addEventListener("change",e=>applyLang(e.target.value));
+document.getElementById("year").textContent=new Date().getFullYear();
+applyLang("en");
+</script>
+</body>
+</html>
